@@ -1,0 +1,76 @@
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    gap: 10px;
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* variant */
+.primary     { background: var(--accent, #8B5A3C); color: var(--text-inverse, #fff); }
+.secondary   { border: 1px solid var(--accent, #8B5A3C); color: var(--accent, #8B5A3C); }
+.ghost       { color: var(--text-primary, #1A1A1A); }
+.destructive { background: var(--destructive, #C0392B); color: var(--text-inverse, #fff); }
+
+
+/* size */
+.small {
+    height: 32px;
+    padding: 0px 12px;
+    font-size: 12px; font-weight: 500;
+}
+
+.medium {
+    height: 40px;
+    padding: 0px 16px;
+    font-size: 14px; font-weight: 500;
+}
+
+.large {
+    height: 48px;
+    padding: 0px 20px;
+    font-size: 16px; font-weight: 400;
+}
+
+
+/* disabled */
+
+.primary:hover{
+    background: var(--accent-hover, #7a4f33);
+}
+.primary:disabled {
+    background: var(--bg-subtle, #E8E2D4);
+    color: var(--text-secondary, #6B6B6B);   /* ← 추가 */
+}
+
+.secondary:hover{
+    border-radius: 8px;
+    border: 1px solid var(--accent, #8B5A3C);
+    background: var(--accent-subtle, rgba(139, 90, 60, 0.12));
+}
+
+.secondary:disabled{
+    border-radius: 8px;
+    border: 1px solid var(--text-secondary, #6B6B6B);
+}
+
+.ghost:hover{
+    border-radius: 8px;
+    background: var(--neutral-hover, rgba(26, 26, 26, 0.05));
+}
+
+.ghost:disabled {
+
+}
+
+.destructive:hover {
+    border-radius: 8px;
+    background: var(--destructive-hover, #A33124);
+}
+
+.destructive:disabled {
+    background: var(--bg-subtle, #E8E2D4);
+    color: var(--text-secondary, #6B6B6B); 
+}

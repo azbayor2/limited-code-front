@@ -1,0 +1,8 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]: Y LIMITED
+    - generic [ref=e6]:
+      - link "About" [ref=e7] [cursor=pointer]:
+        - /url: /about
+      - img [ref=e8]
+  - img "avatar" [ref=e9]
