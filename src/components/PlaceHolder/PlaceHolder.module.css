@@ -1,0 +1,43 @@
+.PlaceHolder {
+  display: flex;
+  height: 40px;
+  padding: 0 12px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+  background-color: var(--text-input);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+
+.placeHolder:focus {
+  border: 2px solid var(--accent);
+  color: var(--text-primary)
+}
+
+.error {
+  display: flex;
+  height: 40px;
+  padding: 0 12px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  border: 2px solid var(--destructive);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.PlaceHolder:disabled {
+  background-color: var(--ivory);
+  color: var(--text-secondary);
+
+}

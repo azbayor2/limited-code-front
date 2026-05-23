@@ -6,6 +6,9 @@ import MenuCard from "./Sidebar/Menu/MenuCard";
 import Sidebar from "./Sidebar/Sidebar";
 import Footer from "./Footer/Footer";
 import OAuthButton from "./OAuthButton/OAuthButton";
+import PlaceHolder from "./PlaceHolder/PlaceHolder";
+import DividerWithText from "./DividerWithText/DividerWithText";
 
 export { Button, Header, NormalDivider,
-   MenuItem, MenuCard, Sidebar, Footer, OAuthButton };
+   MenuItem, MenuCard, Sidebar, Footer, OAuthButton, PlaceHolder,
+  DividerWithText };
