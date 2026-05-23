@@ -1,0 +1,32 @@
+.MenuItem {
+  display: flex;
+  width: 100%;
+  max-width: 244px;
+  height: 36px;
+  padding: 8px 12px;
+  align-items: center;
+  gap: 8px;
+  border-style: none;
+  border-radius: 6px;
+  text-decoration-line: none;
+}
+
+.default {
+  color: var(--text-secondary);
+}
+
+.active {
+  color: var(--accent);
+}
+
+.activeBar {
+  width: 3px;
+  height: 20px;
+  border-radius: 2px;
+  background-color: var(--accent);
+}
+
+.default:hover {
+  color: var(--text-primary);
+  background-color: rgba(0, 0, 0, 0.06);
+}

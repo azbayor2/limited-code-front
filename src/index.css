@@ -1,49 +1,49 @@
 :root {
-    --ivory: #f5f1e8;
-    --text-secondary: #6b6b6b;
-    --text-primary: #1a1a1a;
-    --accent: #8b5a3c;
-    --text-inverse: #ffffff;
-    --bg-subtle: #e8e2d4;
-    --border-subtle: #e5e5e5;
-    --text-input: #fdfdfd;
-    --destructive: #c0392b;
-    --destructive-hover: #A33124;
-    --accent-subtle: rgba(139, 90, 60, 0.12);
-    --neutral-hover: rgba(26, 26, 26, 0.05);
-    
-    --font-sans: 'Inter', sans-serif;
+  --ivory: #f5f1e8;
+  --text-secondary: #6b6b6b;
+  --text-primary: #1a1a1a;
+  --accent: #8b5a3c;
+  --text-inverse: #ffffff;
+  --bg-subtle: #e8e2d4;
+  --border-subtle: #e5e5e5;
+  --text-input: #fdfdfd;
+  --destructive: #c0392b;
+  --destructive-hover: #a33124;
+  --accent-subtle: rgba(139, 90, 60, 0.12);
+  --neutral-hover: rgba(26, 26, 26, 0.05);
+
+  --font-sans: "Inter", sans-serif;
 }
 
-
 .text-body-regular {
-    font-family: var(--font-sans);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 27px;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
 }
 
 .text-body-small {
-    font-family: var(--font-sans);
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 21px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
 }
 
 .text-label-small {
-    font-family: var(--font-sans);
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 16px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
 }
 
 .text-heading-h1 {
-    font-family: var(--font-sans);
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 42px;
+  font-family: var(--font-sans);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 42px;
 }
 
 * {
-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: var(--ivory);
 }
