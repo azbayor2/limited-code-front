@@ -6,7 +6,7 @@ import {
   MenuCard,
 } from "../../../components/index.tsx";
 
-import { CategoryLists } from "./MockData.tsx";
+import { CategoryLists } from "./MockData.ts";
 
 function Test() {
   return (
