@@ -1,0 +1,43 @@
+.footer {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  height: 64px;
+  padding: 16px 48px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.inner {
+  display: flex;
+  width: 90%;
+  height: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footerText {
+  color: var(--text-secondary);
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+.rightGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: fit-content;
+  gap: 32px;
+}
+
+
+.icons {
+  width: 20px;
+  height: 20px;
+}

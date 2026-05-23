@@ -1,0 +1,34 @@
+.oAuthButton {
+  display: flex;
+  height: 48px;
+  padding: 0px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: var(--text-inverse);
+}
+
+
+.icon {
+  height: 24px;
+  width: 24px;
+  background-color: rgba(0,0,0,0);
+}
+
+
+.text {
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 21px;
+  background-color: rgba(0,0,0,0);
+}
+
+.oAuthButton:disabled{
+  cursor: not-allowed;
+  background-color: var(--text-secondary);
+}
