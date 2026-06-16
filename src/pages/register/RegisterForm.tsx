@@ -1,7 +1,35 @@
+import { useState } from 'react';
 import { Button, PlaceHolder } from '../../components';
 import module from './RegisterForm.module.css';
 
 function RegisterForm() {
+  const [idPlaceHolderErrorState, setIdPlaceHolderErrorState] = useState(false);
+  const [passwordState, setPasswordState] = useState(false);
+  const [repasswordState, setRepasswordState] = useState(false);
+  const [{ id, email, password, verificationCode }, dummy] = useState({});
+
+  const idInputHandler = (e) => {
+    const { name, value } = e.target;
+    if (value != 'hanharry2') setIdPlaceHolderErrorState(true);
+    else setIdPlaceHolderErrorState(false);
+  };
+
+  const passwordInputHandler = (e) => {
+    const { name, value } = e.target;
+    if (value.length < 8) setPasswordState(true);
+    else setPasswordState(false);
+    dummy((prev) => ({ ...prev, password: value }));
+  };
+
+  const repasswordInputHandler = (e) => {
+    const { name, value } = e.target;
+    console.log(value);
+    console.log(password);
+
+    if (value == password) setRepasswordState(false);
+    else setRepasswordState(true);
+  };
+
   return (
     <div className={module.body}>
       <div className={module.form}>
@@ -11,14 +39,16 @@ function RegisterForm() {
             classname={module.placeHolder}
             text="아이디"
             disabled={false}
-            error={false}
+            error={idPlaceHolderErrorState}
+            onChange={idInputHandler}
           />
           <PlaceHolder
             classname={module.placeHolder}
             text="비밀번호"
             hidden={true}
             disabled={false}
-            error={false}
+            error={passwordState}
+            onChange={passwordInputHandler}
           />
           <div className={module.gap} />
           <PlaceHolder
@@ -26,7 +56,8 @@ function RegisterForm() {
             text="비밀번호 다시 입력"
             disabled={false}
             hidden={true}
-            error={false}
+            error={repasswordState}
+            onChange={repasswordInputHandler}
           />
           <div className={module.gap2} />
 
