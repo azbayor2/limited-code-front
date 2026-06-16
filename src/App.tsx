@@ -1,12 +1,23 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
-import Test from "./pages/Home/test/test.tsx";
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import Test from './pages/Home/test/test.tsx';
+import RegisterForm from './pages/register/RegisterForm.tsx';
+import { Header, Footer } from './components/index.tsx';
+import styles from './Appstyle.module.css';
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/test" element={<Test />} />
-      </Routes>
+      <div className={styles.root}>
+        <Header /> {/** 헤더 */}
+        <div className={styles.body}>
+          <Routes>
+            <Route path="/test" element={<Test />} /> {/**테스트 페이지  */}
+            <Route path="/register" element={<RegisterForm />} />{' '}
+            {/**로그인 페이지 (임시) */}
+          </Routes>
+        </div>
+        <Footer /> {/** 풋터 */}
+      </div>
     </BrowserRouter>
   );
 }

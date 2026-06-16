@@ -12,7 +12,7 @@
   --accent-subtle: rgba(139, 90, 60, 0.12);
   --neutral-hover: rgba(26, 26, 26, 0.05);
 
-  --font-sans: "Inter", sans-serif;
+  --font-sans: 'Inter', sans-serif;
 }
 
 .text-body-regular {
@@ -43,7 +43,18 @@
   line-height: 42px;
 }
 
-* {
+html,
+body,
+#root {
   box-sizing: border-box;
   background-color: var(--ivory);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }

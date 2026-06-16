@@ -76,3 +76,11 @@
   align-self: stretch;
   background: rgba(0, 0, 0, 0);
 }
+
+.body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
