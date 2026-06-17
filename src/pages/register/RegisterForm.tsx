@@ -1,26 +1,51 @@
 import { useState } from 'react';
 import { Button, PlaceHolder } from '../../components';
 import module from './RegisterForm.module.css';
+import { userApi } from '../../api/user/userApi';
+import type { UserExistRequest } from '../../api/user/userType';
 
 function RegisterForm() {
+  /** 아이디 관련 상태 */
   const [idPlaceHolderErrorState, setIdPlaceHolderErrorState] = useState(false);
-  const [passwordState, setPasswordState] = useState(false);
-  const [repasswordState, setRepasswordState] = useState(false);
-  const [{ id, email, password, verificationCode }, dummy] = useState({});
 
-  const idInputHandler = (e) => {
+  /** 비밀번호 관련 상태 */
+  const [passwordState, setPasswordState] = useState(false);
+
+  /** 비밀번호 재입력 관련 상태 */
+  const [repasswordState, setRepasswordState] = useState(false);
+
+  /** 이메일 관련 상태 */
+  const [emailState, setEmailState] = useState(false);
+
+  /** 이메일 인증번호 관련 상태 */
+  const [emailCodeState, setEmailCodeState] = useState(false);
+
+  /** 회원가입 관련 상태 */
+  const [{ id, email, password, verificationCode }, setData] = useState({});
+
+  /** 아이디 입력했을 때 유효한지 확인 */
+  const idInputHandler = async (e) => {
     const { name, value } = e.target;
-    if (value != 'hanharry2') setIdPlaceHolderErrorState(true);
-    else setIdPlaceHolderErrorState(false);
+
+    const existState = await userApi.checkUserExists({
+      username: value,
+    } as UserExistRequest);
+
+    console.log(existState);
+
+    if (existState) setIdPlaceHolderErrorState(false);
+    else setIdPlaceHolderErrorState(true);
   };
 
+  /** 비밀번호 입력했을 때 유효한지 확인 */
   const passwordInputHandler = (e) => {
     const { name, value } = e.target;
     if (value.length < 8) setPasswordState(true);
     else setPasswordState(false);
-    dummy((prev) => ({ ...prev, password: value }));
+    setData((prev) => ({ ...prev, password: value }));
   };
 
+  /** 비밀번호 재입력 했을 때 같은지 확인 */
   const repasswordInputHandler = (e) => {
     const { name, value } = e.target;
     console.log(value);
@@ -29,6 +54,12 @@ function RegisterForm() {
     if (value == password) setRepasswordState(false);
     else setRepasswordState(true);
   };
+
+  /** 이메일 입력 검증 */
+
+  /** 이메일 인증번호 검증 */
+
+  /** 회원가입 요청 */
 
   return (
     <div className={module.body}>
