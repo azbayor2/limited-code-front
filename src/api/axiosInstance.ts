@@ -1,10 +1,5 @@
 import axios from 'axios';
-import type {
-  AxiosInstance,
-  AxiosRequestConfig,
-  AxiosResponse,
-  AxiosError,
-} from 'axios';
+import type { AxiosInstance } from 'axios';
 import { config } from '../config/config';
 
 const apiInstance: AxiosInstance = axios.create({
