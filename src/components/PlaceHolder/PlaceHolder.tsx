@@ -9,7 +9,7 @@ type PlaceHolderProps = {
   hidden?: boolean;
   name?: string;
   value?: string;
-
+  onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
@@ -24,6 +24,7 @@ function PlaceHolder({
   name,
   value,
   onChange,
+  onKeyDown,
 }: PlaceHolderProps) {
   return (
     <input
@@ -34,6 +35,7 @@ function PlaceHolder({
       name={name}
       value={value}
       onChange={onChange}
+      onKeyDown={onKeyDown}
     />
   );
 }

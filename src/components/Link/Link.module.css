@@ -1,0 +1,19 @@
+.link {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+}
+
+.text {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.text:hover {
+  color: var(--text-secondary);
+}

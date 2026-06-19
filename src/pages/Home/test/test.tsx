@@ -9,6 +9,7 @@ import {
   OAuthButton,
   PlaceHolder,
   DividerWithText,
+  Link,
 } from '../../../components/index.tsx';
 
 import { CategoryLists } from './MockData.ts';
@@ -46,6 +47,7 @@ function Test() {
         <PlaceHolder text="error" disabled={false} error={true} />
         <DividerWithText text="또는" />
         <RegisterForm />
+        <Link name="hello world" href="https://naver.com" />
       </div>
       <Footer />
     </div>

@@ -3,6 +3,7 @@ import Test from './pages/Home/test/test.tsx';
 import RegisterForm from './pages/register/RegisterForm.tsx';
 import { Header, Footer } from './components/index.tsx';
 import styles from './Appstyle.module.css';
+import LoginForm from './pages/login/loginForm.tsx';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Routes>
             <Route path="/test" element={<Test />} /> {/**테스트 페이지  */}
             <Route path="/register" element={<RegisterForm />} />{' '}
+            <Route path='/login' element={<LoginForm/>}/>
             {/**로그인 페이지 (임시) */}
           </Routes>
         </div>

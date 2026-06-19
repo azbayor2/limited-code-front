@@ -57,6 +57,7 @@ function RegisterForm() {
               disabled={false}
               error={formState.emailErrorState}
               onChange={emailInputHandler}
+              classname={module.placeHolderWithButton}
             />
             {/** 이메일 인증번호 버튼 */}
             <Button
@@ -77,6 +78,7 @@ function RegisterForm() {
               disabled={false}
               error={formState.emailCodeErrorState}
               onChange={emailCodeInput}
+              classname={module.placeHolderWithButton}
             />
             {/** 인증번호 검증 버튼*/}
             <Button
@@ -92,7 +94,7 @@ function RegisterForm() {
         </div>
         {/** 회원가입 버튼 */}
         <Button
-          classname={module.button}
+          classname={module.registerButton}
           variant="primary"
           size="large"
           disabled={formState.registerButtonDisabledState}
